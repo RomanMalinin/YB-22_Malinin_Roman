@@ -2,7 +2,7 @@ import requests
 from tkinter import *
 
 
-def click():
+def pars():
     username = us.get()
     repositoriy = re.get()
     r = requests.get(f'https://api.github.com/repos/{username}/{repositoriy}').json()
@@ -39,7 +39,7 @@ lbl = Label(window, text='Type username', font=('Times New Roman', 25))
 lbl.grid(column=0, row=0)
 lbl = Label(window, text='Type repositoriy', font=('Times New Roman', 25))
 lbl.grid(column=0, row=4)
-btn = Button(window, text='Enter', command=click, width=15)
+btn = Button(window, text='Enter', command=pars, width=15)
 btn.grid(column=4, row=3)
 us = Entry(window, width=25)
 us.grid(column=1, row=0)
