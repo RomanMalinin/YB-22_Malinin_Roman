@@ -6,7 +6,7 @@ def pars():
     username = us.get()
     repositoriy = re.get()
     req = requests.get(f'https://api.github.com/repos/{username}/{repositoriy}').json()
-    with open('C:\\Users\\malin\\PycharmProjects\\PY\\venv\\pr11', 'a+') as f:
+    with open('pr11.txt', 'a+') as f:
         if 'company' in req:
             f.write(f"'company': '{req['company']}\n")
         else:
